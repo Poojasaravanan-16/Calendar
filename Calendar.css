@@ -1,0 +1,124 @@
+/* styles/Calendar.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #0a1a2f, #3c4a57); /* Navy Blue → Grey */
+    color: #fff;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #ffc0cb; /* Light pink */
+    margin-bottom: 20px;
+  }
+  
+  .month-name {
+    font-size: 1.8rem;
+    color: #ff9dcf; /* Pinkish header */
+    margin: 10px 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .header input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 160px;
+  }
+  
+  .header button {
+    background-color: #ff4081; /* Pink */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .header button:hover {
+    background-color: #f06292;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+    overflow: auto;
+  }
+  
+  .day-label {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .day {
+    background-color: rgba(16, 23, 38, 0.86);
+    border-radius: 8px;
+    padding: 6px;
+    min-height: 70px;
+    position: relative;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .day:hover {
+    transform: scale(1.03);
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .today {
+    border: 2px solid #ff80ab;
+  }
+  
+  .dimmed {
+    opacity: 0.4;
+  }
+  
+  .event {
+    background-color: rgba(255, 255, 255, 0.5); /* Half-white */
+    color: #1e2b3a;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .edit-btn, .delete-btn {
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .edit-btn:hover {
+    color: #00bcd4; /* Cyan */
+  }
+  
+  .delete-btn:hover {
+    color: #ff1744; /* Red */
+  }
+  
